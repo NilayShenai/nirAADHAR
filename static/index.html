@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nirAADHAR</title>
+    <meta name="description" content="Fuck da government!!!">
+    <meta property="og:title" content="nirAADHAR">
+    <meta property="og:description" content="Fuck da government!!!">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="nirAADHAR">
+    <meta name="twitter:description" content="Fuck da government!!!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="terminal-container">
+        <header class="header">
+            <div class="header-line">
+                <span class="logo">nirAADHAR</span>
+            </div>
+            <p class="privacy-note">
+                images are processed entirely in-memory. nothing is saved to disk or logged. all files are discarded immediately.
+            </p>
+        </header>
+        <div class="divider"></div>
+        <section id="upload-section" class="section active">
+            <div id="drop-zone" class="upload-box">
+                <input type="file" id="file-input" accept="image/*" class="hidden-input" />
+                <div class="upload-content">
+                    <span class="link-action">[ upload image file ]</span>
+                    <span class="upload-sub">or drag and drop here</span>
+                </div>
+            </div>
+        </section>
+        <section id="editor-section" class="section hidden">
+            <div class="preview-panel">
+                <img id="image-preview" alt="document preview" />
+                <button id="reset-button" class="action-btn-danger">[ remove ]</button>
+            </div>
+            <div class="control-panel">
+                <span class="section-label">select target year digit:</span>
+                <div id="digit-selector" class="digit-grid">
+                    <button type="button" class="digit-btn" data-digit="0">[0]</button>
+                    <button type="button" class="digit-btn" data-digit="1">[1]</button>
+                    <button type="button" class="digit-btn" data-digit="2">[2]</button>
+                    <button type="button" class="digit-btn" data-digit="3">[3]</button>
+                    <button type="button" class="digit-btn" data-digit="4">[4]</button>
+                    <button type="button" class="digit-btn" data-digit="5">[5]</button>
+                    <button type="button" class="digit-btn" data-digit="6">[6]</button>
+                    <button type="button" class="digit-btn" data-digit="7">[7]</button>
+                    <button type="button" class="digit-btn" data-digit="8">[8]</button>
+                    <button type="button" class="digit-btn" data-digit="9">[9]</button>
+                </div>
+                <button id="process-button" class="process-btn" disabled>
+                    <span class="btn-text">[ process image ]</span>
+                    <span id="spinner" class="loader hidden">...</span>
+                </button>
+            </div>
+        </section>
+        <section id="result-section" class="section hidden">
+            <div class="result-panel">
+                <div class="result-image-wrapper">
+                    <img id="image-result" alt="modified output" />
+                    <span class="status-tag">[ output ]</span>
+                </div>
+            </div>
+            <div class="actions-panel">
+                <button id="download-button" class="action-btn-primary">[ download image ]</button>
+                <button id="copy-button" class="action-btn-primary">[ copy to clipboard ]</button>
+                <button id="restart-button" class="action-btn-secondary">[ edit another ]</button>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <footer class="footer">
+            <span>police ki mkc 3 baar!</span>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
