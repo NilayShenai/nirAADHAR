@@ -141,7 +141,7 @@ webapp/
 ├── fly.toml                    # Production deployment configuration
 ├── requirements.txt            # Python dependencies
 ├── main.py                     # FastAPI application endpoints
-├── digit_modifier.py           # Core computer vision & synthesis engine
+├── diditforthelulz.py          # Core computer vision & synthesis engine
 ├── fonts/                      # TrueType font assets
 │   ├── Inter-Regular.ttf
 │   ├── Inter-Bold.ttf

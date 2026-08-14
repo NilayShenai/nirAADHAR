@@ -4,7 +4,7 @@ from fastapi.responses import Response, FileResponse
 from fastapi.staticfiles import StaticFiles
 import cv2
 import numpy as np
-from digit_modifier import DateDigitModifier
+from diditforthelulz import DateDigitModifier
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 app = FastAPI(
