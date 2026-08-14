@@ -52,7 +52,7 @@ The image $I \in \mathbb{R}^{H \times W \times 3}$ is converted to single-channe
 
 $$\tau^* = \arg\max_{\tau} \sigma_B^2(\tau) = \omega_0(\tau)\omega_1(\tau)\left[\mu_0(\tau) - \mu_1(\tau)\right]^2$$
 
-Contour extraction with full topological hierarchy ($\texttt{RETR\_TREE}$) identifies candidate character bounding boxes $b_i = (x_i, y_i, w_i, h_i)$. Extraneous noise and document borders are filtered using relative scale bounds:
+Contour extraction with topological hierarchy (`cv2.RETR_TREE`) identifies candidate character bounding boxes $b_i = (x_i, y_i, w_i, h_i)$. Extraneous noise and document borders are filtered using relative scale bounds:
 
 $$h_{\min} = 8\text{ px}, \quad h_{\max} = 0.60 \cdot H_{\text{img}}, \quad 0.15 \le \frac{w_i}{h_i} \le 1.80$$
 
@@ -82,7 +82,7 @@ The engine identifies the document's font family by evaluating normalized Inters
 
 $$\text{IoU}(C, R) = \frac{\sum_{(x,y)} \left(C(x,y) \land R(x,y)\right)}{\sum_{(x,y)} \left(C(x,y) \lor R(x,y)\right)}$$
 
-$$\text{Score}(\mathcal{F}) = 0.40 \cdot \text{IoU}_{b_0}(\text{'2'}) + 0.30 \cdot \text{IoU}_{b_1}(\text{'0'}) + 0.30 \cdot \text{IoU}_{b_2}(\text{'0'})$$
+$$\text{Score}(\mathcal{F}) = 0.40 \cdot \text{IoU}(C_0, R_2) + 0.30 \cdot \text{IoU}(C_1, R_0) + 0.30 \cdot \text{IoU}(C_2, R_0)$$
 
 $$\hat{\mathcal{F}} = \arg\max_{\mathcal{F}} \text{Score}(\mathcal{F})$$
 
